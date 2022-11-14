@@ -1,0 +1,10 @@
+<h2>Hello Component</h2>
+<h3>Your name: {{ user.name }}</h3>
+<p>Your age: {{ user.age }}</p>
+<!-- using ngif -->
+<div *ngIf="user.age >= 13">You can see PG-13 content</div>
+<!-- using ng-template -->
+<div *ngIf="user.age >= 13; else noPG13">Bạn có thể xem nội dung PG-13</div>
+<ng-template #noPG13>
+    <div>Bạn không thể xem nội dung PG-13</div>
+    <button (click)="showInfo()">Click me!</button></ng-template>
