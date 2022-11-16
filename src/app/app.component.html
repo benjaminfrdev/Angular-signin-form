@@ -16,7 +16,9 @@
     <h2>Property Binding & Event Binding</h2>
     <app-author-list></app-author-list>
     <h2>Twoway Binding</h2>
-    <input type="text" [ngModel]='name'>
+    <input type="text" [(ngModel)]='name'>
+    <h3>Name with twoway binding : {{name}}</h3>
+    <app-toggle [(checked)]='checked'></app-toggle>
 </body>
 
 </html>

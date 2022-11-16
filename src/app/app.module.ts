@@ -8,6 +8,7 @@ import { AuthorComponent } from './author/author.component';
 import { AuthorListComponent } from './author/author-list/author-list.component';
 import { AuthorDetailComponent } from './author/author-detail/author-detail.component';
 import { FormsModule } from '@angular/forms';
+import { ToggleComponent } from './toggle/toggle.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     HelloComponent,
     AuthorComponent,
     AuthorListComponent,
-    AuthorDetailComponent
+    AuthorDetailComponent,
+    ToggleComponent
   ],
   imports: [
     BrowserModule,
