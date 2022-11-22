@@ -26,14 +26,39 @@
 <div class="card">
   <div class="card-header">
     You have selected
-    <span class="badge bg-primary">{{ counter }}</span> items.
+    <ng-container [ngTemplateOutlet]="sameContent"></ng-container>
+    items.
   </div>
   <div class="card-body">
-    There are <span class="badge bg-primary">{{ counter }}</span> items was
+    There are items was
+    <ng-container [ngTemplateOutlet]="sameContent"></ng-container>
     selected.
   </div>
   <div class="card-footer">
     You have selected
-    <span class="badge bg-primary">{{ counter }}</span> items.
+    <ng-container [ngTemplateOutlet]="sameContent"></ng-container>
+    items.
   </div>
 </div>
+
+<ng-template #sameContent>
+  <span class="badge bg-secondary">{{ counter }}</span>
+</ng-template>
+
+
+<h3></h3>
+<ng-template #customTabButtons>
+  <div class="custom-class">
+    <button class="tab-button" >
+      ABCD
+    </button>
+    <button class="tab-button">
+      ABCD
+    </button>
+  </div>
+</ng-template>
+<ng-template #templateRefBen>
+  <h3>MiddleFinger Passed</h3>
+</ng-template>
+<tab-container [headerTemplate]="customTabButtons"></tab-container>
+<tab-container [middleFinger] = 'templateRefBen'></tab-container>

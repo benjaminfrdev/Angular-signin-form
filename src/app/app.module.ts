@@ -10,6 +10,7 @@ import { AuthorDetailComponent } from './author/author-detail/author-detail.comp
 import { FormsModule } from '@angular/forms';
 import { ToggleComponent } from './toggle/toggle.component';
 import { FlexComponent } from './flex/flex.component';
+import { TabContainerComponent } from './tab-container/tab-container.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FlexComponent } from './flex/flex.component';
     AuthorDetailComponent,
     ToggleComponent,
     FlexComponent,
+    TabContainerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
