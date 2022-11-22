@@ -1,24 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angular Learning Parts</title>
-</head>
-
-<body>
-
-    <h1>Angular Data Binding</h1>
-    <h2>Interpolation: </h2>
-    <app-hello></app-hello>
-    <h2>Property Binding & Event Binding</h2>
-    <app-author-list></app-author-list>
-    <h2>Twoway Binding</h2>
-    <input type="text" [(ngModel)]='name'>
-    <h3>Name with twoway binding : {{name}}</h3>
-    <app-toggle [(checked)]='checked'></app-toggle>
-</body>
-
-</html>
+<h1>Angular Data Binding</h1>
+<h2>Interpolation: </h2>
+<app-hello></app-hello>
+<h2>Property Binding & Event Binding</h2>
+<app-author-list></app-author-list>
+<h2>Twoway Binding</h2>
+<input type="text" [(ngModel)]='name'>
+<h3>Name with twoway binding : {{name}}</h3>
+<app-toggle [(checked)]='checked'></app-toggle>
+<h2>Template Varible and ViewChild/ViewChildren</h2>
+<button (click)="toggleComp.toggle()">Toggle From App Component</button>
+<button (click)="clickInside()">Toggle with ViewChild</button>
+<app-toggle #toggleComp></app-toggle>
+<app-toggle #toggleComp></app-toggle>
+<div #container></div>
+<form #nameForm="ngForm">
+  <button>Submit</button>
+</form>
+<h2>Typescript advanced type</h2>
+<flex-container flexDirection="column">
+  <p>Inject</p>
+  <p>Content</p>
+</flex-container>
+<h2>Ng-Template, ngTemplateOutlet and ng-container</h2>
+<h3>Su dung ng-template bi 1 comp bi lap lai </h3>
+<div class="card">
+  <div class="card-header">
+    You have selected
+    <span class="badge bg-primary">{{ counter }}</span> items.
+  </div>
+  <div class="card-body">
+    There are <span class="badge bg-primary">{{ counter }}</span> items was
+    selected.
+  </div>
+  <div class="card-footer">
+    You have selected
+    <span class="badge bg-primary">{{ counter }}</span> items.
+  </div>
+</div>

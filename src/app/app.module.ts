@@ -9,6 +9,7 @@ import { AuthorListComponent } from './author/author-list/author-list.component'
 import { AuthorDetailComponent } from './author/author-detail/author-detail.component';
 import { FormsModule } from '@angular/forms';
 import { ToggleComponent } from './toggle/toggle.component';
+import { FlexComponent } from './flex/flex.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +18,11 @@ import { ToggleComponent } from './toggle/toggle.component';
     AuthorComponent,
     AuthorListComponent,
     AuthorDetailComponent,
-    ToggleComponent
+    ToggleComponent,
+    FlexComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
